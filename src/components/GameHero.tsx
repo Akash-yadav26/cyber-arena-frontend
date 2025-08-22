@@ -25,18 +25,8 @@ const GameHero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
         <div className="animate-fade-in-up">
-          <h1 className="text-6xl md:text-8xl font-gaming font-black mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-neon-green via-neon-blue to-neon-purple bg-clip-text text-transparent">
-              COMPETE.
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-neon-purple via-neon-red to-neon-cyan bg-clip-text text-transparent">
-              CONQUER.
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-neon-cyan via-neon-green to-neon-blue bg-clip-text text-transparent">
-              CONNECT.
-            </span>
+          <h1 className="text-6xl md:text-8xl font-gaming font-black mb-6 leading-tight text-white">
+            GAME ON!
           </h1>
           
           <p className="text-xl md:text-2xl text-foreground/80 mb-8 font-cyberpunk font-light max-w-3xl mx-auto leading-relaxed">
