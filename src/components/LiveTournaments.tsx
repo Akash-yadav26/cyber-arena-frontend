@@ -75,30 +75,30 @@ const LiveTournaments = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
           {liveTournaments.map((tournament) => (
             <Card key={tournament.id} className="glass-card border-white/10 hover:border-neon-green/50 transition-all duration-300 group">
-              <CardHeader className="pb-4">
+              <CardHeader className="pb-3 md:pb-4">
                 <div className="flex items-center justify-between mb-2">
-                  <span className={`px-3 py-1 rounded-full text-xs font-cyberpunk font-bold border ${getStatusColor(tournament.status)}`}>
-                    {tournament.status === "LIVE" && <span className="inline-block w-2 h-2 bg-neon-red rounded-full mr-2 animate-pulse" />}
+                  <span className={`px-2 md:px-3 py-1 rounded-full text-xs font-cyberpunk font-bold border ${getStatusColor(tournament.status)}`}>
+                    {tournament.status === "LIVE" && <span className="inline-block w-1.5 h-1.5 md:w-2 md:h-2 bg-neon-red rounded-full mr-1 md:mr-2 animate-pulse" />}
                     {tournament.status}
                   </span>
-                  <div className="flex items-center text-sm text-foreground/60">
-                    <Eye className="h-4 w-4 mr-1" />
+                  <div className="flex items-center text-xs md:text-sm text-foreground/60">
+                    <Eye className="h-3 w-3 md:h-4 md:w-4 mr-1" />
                     {tournament.viewers}
                   </div>
                 </div>
-                <CardTitle className="text-xl font-gaming text-foreground group-hover:text-neon-green transition-colors">
+                <CardTitle className="text-lg md:text-xl font-gaming text-foreground group-hover:text-neon-green transition-colors">
                   {tournament.title}
                 </CardTitle>
-                <p className="text-neon-blue font-cyberpunk font-medium">{tournament.game}</p>
+                <p className="text-sm md:text-base text-neon-blue font-cyberpunk font-medium">{tournament.game}</p>
               </CardHeader>
               
-              <CardContent className="space-y-4">
-                <div className="flex items-center justify-between text-sm">
+              <CardContent className="space-y-3 md:space-y-4">
+                <div className="flex items-center justify-between text-xs md:text-sm">
                   <div className="flex items-center text-foreground/70">
-                    <Clock className="h-4 w-4 mr-2 text-neon-cyan" />
+                    <Clock className="h-3 w-3 md:h-4 md:w-4 mr-1 md:mr-2 text-neon-cyan" />
                     {tournament.timeLeft} left
                   </div>
                   <div className="text-neon-purple font-cyberpunk font-semibold">
@@ -106,28 +106,28 @@ const LiveTournaments = () => {
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-3 gap-4 py-4 border-t border-white/10">
+                <div className="grid grid-cols-3 gap-2 md:gap-4 py-3 md:py-4 border-t border-white/10">
                   <div className="text-center">
-                    <div className="text-neon-green font-gaming font-bold">{tournament.prizePool}</div>
+                    <div className="text-sm md:text-base lg:text-lg font-gaming font-bold text-neon-green">{tournament.prizePool}</div>
                     <div className="text-xs text-foreground/60">Prize Pool</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-neon-blue font-gaming font-bold">{tournament.teams}</div>
+                    <div className="text-sm md:text-base lg:text-lg font-gaming font-bold text-neon-blue">{tournament.teams}</div>
                     <div className="text-xs text-foreground/60">Teams</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-neon-purple font-gaming font-bold">{tournament.viewers}</div>
+                    <div className="text-sm md:text-base lg:text-lg font-gaming font-bold text-neon-purple">{tournament.viewers}</div>
                     <div className="text-xs text-foreground/60">Viewers</div>
                   </div>
                 </div>
                 
-                <div className="flex gap-3">
-                  <Button variant="tournament" size="sm" className="flex-1">
-                    <PlayCircle className="h-4 w-4" />
+                <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
+                  <Button variant="tournament" size="sm" className="flex-1 text-xs md:text-sm">
+                    <PlayCircle className="h-3 w-3 md:h-4 md:w-4" />
                     Watch Live
                   </Button>
-                  <Button variant="hero" size="sm" className="flex-1">
-                    <Trophy className="h-4 w-4" />
+                  <Button variant="hero" size="sm" className="flex-1 text-xs md:text-sm">
+                    <Trophy className="h-3 w-3 md:h-4 md:w-4" />
                     Join
                   </Button>
                 </div>

@@ -25,40 +25,40 @@ const GameHero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
         <div className="animate-fade-in-up">
-          <h1 className="text-6xl md:text-8xl font-gaming font-black mb-6 leading-tight text-white">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-gaming font-black mb-4 md:mb-6 leading-tight text-white">
             GAME ON!
           </h1>
           
-          <p className="text-xl md:text-2xl text-foreground/80 mb-8 font-cyberpunk font-light max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/80 mb-6 md:mb-8 font-cyberpunk font-light max-w-3xl mx-auto leading-relaxed px-4">
             Join the ultimate eSports tournament platform. Battle in Fortnite, PUBG, Valorant, and Apex Legends. 
             Rise through the ranks and claim your glory.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-            <Button variant="gaming" size="lg" className="text-lg px-8 py-4 min-w-[200px]">
-              <Play className="h-5 w-5" />
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center mb-8 md:mb-12 px-4">
+            <Button variant="gaming" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-w-[180px] md:min-w-[200px]">
+              <Play className="h-4 w-4 md:h-5 md:w-5" />
               Join Now
             </Button>
-            <Button variant="hero" size="lg" className="text-lg px-8 py-4 min-w-[200px]">
-              <Trophy className="h-5 w-5" />
+            <Button variant="hero" size="lg" className="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full sm:w-auto min-w-[180px] md:min-w-[200px]">
+              <Trophy className="h-4 w-4 md:h-5 md:w-5" />
               Register Tournament
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div className="glass-card p-6 text-center neon-border">
-              <div className="text-3xl font-gaming font-bold text-neon-green mb-2">50K+</div>
-              <div className="text-sm text-foreground/70 font-cyberpunk">Active Players</div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto px-4">
+            <div className="glass-card p-4 md:p-6 text-center neon-border">
+              <div className="text-2xl md:text-3xl font-gaming font-bold text-neon-green mb-1 md:mb-2">50K+</div>
+              <div className="text-xs md:text-sm text-foreground/70 font-cyberpunk">Active Players</div>
             </div>
-            <div className="glass-card p-6 text-center neon-border">
-              <div className="text-3xl font-gaming font-bold text-neon-blue mb-2">1.2M</div>
-              <div className="text-sm text-foreground/70 font-cyberpunk">Tournaments</div>
+            <div className="glass-card p-4 md:p-6 text-center neon-border">
+              <div className="text-2xl md:text-3xl font-gaming font-bold text-neon-blue mb-1 md:mb-2">1.2M</div>
+              <div className="text-xs md:text-sm text-foreground/70 font-cyberpunk">Tournaments</div>
             </div>
-            <div className="glass-card p-6 text-center neon-border">
-              <div className="text-3xl font-gaming font-bold text-neon-purple mb-2">$2.5M</div>
-              <div className="text-sm text-foreground/70 font-cyberpunk">Prize Pool</div>
+            <div className="glass-card p-4 md:p-6 text-center neon-border">
+              <div className="text-2xl md:text-3xl font-gaming font-bold text-neon-purple mb-1 md:mb-2">$2.5M</div>
+              <div className="text-xs md:text-sm text-foreground/70 font-cyberpunk">Prize Pool</div>
             </div>
           </div>
         </div>

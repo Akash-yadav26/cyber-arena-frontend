@@ -65,54 +65,54 @@ const CommunityHub = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
           {/* Squad Cards */}
-          <div className="lg:col-span-2 space-y-6">
-            <h3 className="text-2xl font-gaming font-bold text-neon-green mb-6">Featured Squads</h3>
+          <div className="xl:col-span-2 space-y-4 md:space-y-6">
+            <h3 className="text-xl md:text-2xl font-gaming font-bold text-neon-green mb-4 md:mb-6">Featured Squads</h3>
             {squads.map((squad) => (
               <Card key={squad.id} className="glass-card border-white/10 hover:border-neon-purple/50 transition-all duration-300">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between">
+                <CardHeader className="pb-3 md:pb-4">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-2 sm:space-y-0">
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 rounded-lg glass-card border border-neon-purple/30 flex items-center justify-center">
-                        <Users className="h-6 w-6 text-neon-purple" />
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg glass-card border border-neon-purple/30 flex items-center justify-center">
+                        <Users className="h-5 w-5 md:h-6 md:w-6 text-neon-purple" />
                       </div>
                       <div>
-                        <CardTitle className="text-xl font-gaming text-foreground">{squad.name}</CardTitle>
-                        <p className="text-sm text-neon-blue font-cyberpunk">{squad.game}</p>
+                        <CardTitle className="text-lg md:text-xl font-gaming text-foreground">{squad.name}</CardTitle>
+                        <p className="text-xs md:text-sm text-neon-blue font-cyberpunk">{squad.game}</p>
                       </div>
                     </div>
-                    <Badge className={`${getStatusColor(squad.status)} border font-cyberpunk`}>
+                    <Badge className={`${getStatusColor(squad.status)} border font-cyberpunk text-xs`}>
                       {squad.status.toUpperCase()}
                     </Badge>
                   </div>
                 </CardHeader>
                 
-                <CardContent className="space-y-4">
-                  <p className="text-sm text-foreground/70 font-cyberpunk">{squad.description}</p>
+                <CardContent className="space-y-3 md:space-y-4">
+                  <p className="text-xs md:text-sm text-foreground/70 font-cyberpunk">{squad.description}</p>
                   
-                  <div className="grid grid-cols-3 gap-4 py-3 border-t border-white/10">
+                  <div className="grid grid-cols-3 gap-2 md:gap-4 py-2 md:py-3 border-t border-white/10">
                     <div className="text-center">
-                      <div className="text-neon-green font-gaming font-bold">{squad.members}</div>
+                      <div className="text-sm md:text-base font-gaming font-bold text-neon-green">{squad.members}</div>
                       <div className="text-xs text-foreground/60">Members</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-neon-blue font-gaming font-bold">{squad.level}</div>
+                      <div className="text-sm md:text-base font-gaming font-bold text-neon-blue">{squad.level}</div>
                       <div className="text-xs text-foreground/60">Level</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-neon-purple font-gaming font-bold">{squad.wins}</div>
+                      <div className="text-sm md:text-base font-gaming font-bold text-neon-purple">{squad.wins}</div>
                       <div className="text-xs text-foreground/60">Wins</div>
                     </div>
                   </div>
                   
-                  <div className="flex gap-3">
-                    <Button variant="tournament" size="sm" className="flex-1">
-                      <UserPlus className="h-4 w-4" />
+                  <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
+                    <Button variant="tournament" size="sm" className="flex-1 text-xs md:text-sm">
+                      <UserPlus className="h-3 w-3 md:h-4 md:w-4" />
                       Join Squad
                     </Button>
-                    <Button variant="hero" size="sm">
-                      <MessageCircle className="h-4 w-4" />
+                    <Button variant="hero" size="sm" className="text-xs md:text-sm">
+                      <MessageCircle className="h-3 w-3 md:h-4 md:w-4" />
                       Chat
                     </Button>
                   </div>
@@ -122,8 +122,8 @@ const CommunityHub = () => {
           </div>
 
           {/* Live Channels */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-gaming font-bold text-neon-cyan mb-6">Live Channels</h3>
+          <div className="space-y-4 md:space-y-6">
+            <h3 className="text-xl md:text-2xl font-gaming font-bold text-neon-cyan mb-4 md:mb-6">Live Channels</h3>
             <Card className="glass-card border-white/10">
               <CardHeader>
                 <CardTitle className="text-lg font-gaming text-foreground flex items-center">

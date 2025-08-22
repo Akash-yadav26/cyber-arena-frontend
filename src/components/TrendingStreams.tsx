@@ -90,10 +90,10 @@ const TrendingStreams = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 md:gap-8">
           {/* Main Streams */}
-          <div className="lg:col-span-2">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="xl:col-span-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
               {streams.map((stream) => (
                 <Card key={stream.id} className="glass-card border-white/10 hover:border-neon-red/50 transition-all duration-300 group overflow-hidden">
                   <div className="relative">

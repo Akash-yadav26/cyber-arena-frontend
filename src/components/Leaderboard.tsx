@@ -116,28 +116,30 @@ const Leaderboard = () => {
                 player.rank <= 3 ? 'ring-2 ring-neon-green/20' : ''
               }`}
             >
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-6">
+              <CardContent className="p-4 md:p-6">
+                <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between space-y-4 lg:space-y-0">
+                  <div className="flex items-center space-x-3 md:space-x-6 w-full lg:w-auto">
                     {/* Rank */}
-                    <div className="flex items-center justify-center w-16 h-16 rounded-full glass-card border border-neon-blue/30">
+                    <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full glass-card border border-neon-blue/30">
                       <div className="text-center">
                         {getRankIcon(player.rank)}
-                        <div className="text-sm font-gaming font-bold text-neon-blue mt-1">#{player.rank}</div>
+                        <div className="text-xs md:text-sm font-gaming font-bold text-neon-blue mt-1">#{player.rank}</div>
                       </div>
                     </div>
 
                     {/* Avatar & Info */}
                     <div className="flex-1">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <span className="text-3xl">{player.avatar}</span>
-                        <div>
-                          <h3 className="text-xl font-gaming font-bold text-foreground">
-                            {player.username} {player.country}
-                          </h3>
-                          <p className="text-sm text-neon-cyan font-cyberpunk">Level {player.level} • {player.game}</p>
+                      <div className="flex flex-col sm:flex-row sm:items-center space-y-1 sm:space-y-0 sm:space-x-3 mb-2">
+                        <div className="flex items-center space-x-2">
+                          <span className="text-2xl md:text-3xl">{player.avatar}</span>
+                          <div>
+                            <h3 className="text-base md:text-xl font-gaming font-bold text-foreground">
+                              {player.username} {player.country}
+                            </h3>
+                            <p className="text-xs md:text-sm text-neon-cyan font-cyberpunk">Level {player.level} • {player.game}</p>
+                          </div>
                         </div>
-                        <Badge className={`${getBadgeColor(player.badge)} border font-cyberpunk`}>
+                        <Badge className={`${getBadgeColor(player.badge)} border font-cyberpunk text-xs`}>
                           {player.badge}
                         </Badge>
                       </div>
@@ -145,27 +147,27 @@ const Leaderboard = () => {
                   </div>
 
                   {/* Stats */}
-                  <div className="grid grid-cols-4 gap-6 text-center">
+                  <div className="grid grid-cols-4 gap-3 md:gap-6 text-center w-full lg:w-auto">
                     <div>
-                      <div className="text-2xl font-gaming font-bold text-neon-green">
-                        {player.xp.toLocaleString()}
+                      <div className="text-lg md:text-2xl font-gaming font-bold text-neon-green">
+                        {(player.xp / 1000000).toFixed(1)}M
                       </div>
                       <div className="text-xs text-foreground/60">XP</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-gaming font-bold text-neon-blue">
+                      <div className="text-lg md:text-2xl font-gaming font-bold text-neon-blue">
                         {player.wins}
                       </div>
                       <div className="text-xs text-foreground/60">Wins</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-gaming font-bold text-neon-purple">
+                      <div className="text-lg md:text-2xl font-gaming font-bold text-neon-purple">
                         {player.winRate}%
                       </div>
                       <div className="text-xs text-foreground/60">Win Rate</div>
                     </div>
                     <div className="flex items-center justify-center">
-                      <Zap className="h-6 w-6 text-yellow-400 animate-pulse" />
+                      <Zap className="h-5 w-5 md:h-6 md:w-6 text-yellow-400 animate-pulse" />
                     </div>
                   </div>
                 </div>
